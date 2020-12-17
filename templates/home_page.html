@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %} Home Page {% endblock %}
+{% block content %}
+    <h1>Create Your Madlib:</h1>
+    <form action="/story">
+        {% for word in descriptive_words %}
+        <label for="{{word}}">{{word}}</label>
+            <input id="{{word}}", type="text", name="{{word}}">
+            <br>
+            <br>
+        {% endfor %}
+        <br>
+        <button>Create Story</button>
+    </form>
+{% endblock %} 
